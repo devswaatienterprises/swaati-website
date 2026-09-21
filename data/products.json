@@ -9,7 +9,14 @@
       "category": "Structural Repair",
       "categorySlug": "structural-repair",
       "type": "Bonding Agents",
-      "subcategory": "SBR Latex Polymer"
+      "subcategory": "SBR Latex Polymer",
+      "documents": {
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "ALFASHIELD_SBR_50_TDS.pdf",
+          "url": "/documents/alfashield-polymers/ALFASHIELD_SBR_50_TDS.pdf"
+        }
+      }
     },
     {
       "id": "alfa-crete-prime-plus",
@@ -20,7 +27,14 @@
       "category": "Waterproofing",
       "categorySlug": "waterproofing",
       "type": "Waterproofing copolymer",
-      "subcategory": "Acrylic waterproofing copolymer"
+      "subcategory": "Acrylic waterproofing copolymer",
+      "documents": {
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "ALFA_CRETE_PRIME_PLUS_TDS.pdf",
+          "url": "/documents/alfashield-polymers/ALFA_CRETE_PRIME_PLUS_TDS.pdf"
+        }
+      }
     },
     {
       "id": "alfa-black",
@@ -31,7 +45,14 @@
       "category": "Waterproofing",
       "categorySlug": "waterproofing",
       "type": "Bituminous Waterproofing",
-      "subcategory": "Bituminous Waterproofing Coating"
+      "subcategory": "Bituminous Waterproofing Coating",
+      "documents": {
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "ALFASHIELD_BLACK_TDS.pdf",
+          "url": "/documents/alfashield-polymers/ALFASHIELD_BLACK_TDS.pdf"
+        }
+      }
     },
     {
       "id": "alfa-white",
@@ -42,7 +63,14 @@
       "category": "Waterproofing",
       "categorySlug": "waterproofing",
       "type": "Protective Waterproof Coatings",
-      "subcategory": "Acrylic Waterproof Coating for wall and roof"
+      "subcategory": "Acrylic Waterproof Coating for wall and roof",
+      "documents": {
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "ALFASHIELD_WHITE_TDS.pdf",
+          "url": "/documents/alfashield-polymers/ALFASHIELD_WHITE_TDS.pdf"
+        }
+      }
     },
     {
       "id": "alfa-mr-black",
@@ -53,7 +81,14 @@
       "category": "Waterproofing",
       "categorySlug": "waterproofing",
       "type": "Bituminous Waterproofing",
-      "subcategory": "Bituminous Waterproofing Coating with high tensile"
+      "subcategory": "Bituminous Waterproofing Coating with high tensile",
+      "documents": {
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "ALFASHIELD_MR_BLACK_TDS.pdf",
+          "url": "/documents/alfashield-polymers/ALFASHIELD_MR_BLACK_TDS.pdf"
+        }
+      }
     },
     {
       "id": "alfa-pu-1k",
@@ -64,7 +99,14 @@
       "category": "Waterproofing",
       "categorySlug": "waterproofing",
       "type": "Liquid Applied Waterproofing",
-      "subcategory": "PU Waterproofing Coating"
+      "subcategory": "PU Waterproofing Coating",
+      "documents": {
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "ALFA_PU_1K_TDS.pdf",
+          "url": "/documents/alfashield-polymers/ALFA_PU_1K_TDS.pdf"
+        }
+      }
     },
     {
       "id": "apcocrete",
@@ -207,7 +249,14 @@
       "category": "Grouts",
       "categorySlug": "grouts",
       "type": "Polyurethane injection",
-      "subcategory": "Polyurethane multiuse grout for waterproofing"
+      "subcategory": "Polyurethane multiuse grout for waterproofing",
+      "documents": {
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "TDS_Ease_Grout.pdf",
+          "url": "/documents/constro-link-ease-series/TDS_Ease_Grout.pdf"
+        }
+      }
     },
     {
       "id": "ease-koolcoat",
@@ -218,7 +267,14 @@
       "category": "Protective Coatings",
       "categorySlug": "protective-coatings",
       "type": "Protective Coatings",
-      "subcategory": "Cool roof system"
+      "subcategory": "Cool roof system",
+      "documents": {
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "TDS_Ease_Koolcoat.pdf",
+          "url": "/documents/constro-link-ease-series/TDS_Ease_Koolcoat.pdf"
+        }
+      }
     },
     {
       "id": "ease-nano-primer",
@@ -2121,7 +2177,19 @@
       "category": "Concrete Admixtures",
       "categorySlug": "concrete-admixtures",
       "type": "Crystalline waterproofing",
-      "subcategory": "Integral crystalline waterproofing admixture"
+      "subcategory": "Integral crystalline waterproofing admixture",
+      "documents": {
+        "brochure": {
+          "title": "Product Brochure",
+          "fileName": "Penetron_Admix_Brochure.pdf",
+          "url": "/documents/penetron/Penetron_Admix_Brochure.pdf"
+        },
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "PENETRON_ADMIX_TDS.pdf",
+          "url": "/documents/penetron/PENETRON_ADMIX_TDS.pdf"
+        }
+      }
     },
     {
       "id": "penetron-penecrete-mortar",
@@ -2132,7 +2200,14 @@
       "category": "Structural Repair",
       "categorySlug": "structural-repair",
       "type": "Repair Mortars & Microconcrete",
-      "subcategory": "Repair Mortar / Microconcrete"
+      "subcategory": "Repair Mortar / Microconcrete",
+      "documents": {
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "PENECRETE_MORTAR_TDS.pdf",
+          "url": "/documents/penetron/PENECRETE_MORTAR_TDS.pdf"
+        }
+      }
     },
     {
       "id": "penetron-slurry-coating",
@@ -2143,7 +2218,14 @@
       "category": "Waterproofing",
       "categorySlug": "waterproofing",
       "type": "Crystalline Waterproofing",
-      "subcategory": "Crystalline Slurry Coating"
+      "subcategory": "Crystalline Slurry Coating",
+      "documents": {
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "PENETRON_COATING_TDS.pdf",
+          "url": "/documents/penetron/PENETRON_COATING_TDS.pdf"
+        }
+      }
     },
     {
       "id": "penetron-plus",
@@ -2154,7 +2236,14 @@
       "category": "Waterproofing",
       "categorySlug": "waterproofing",
       "type": "Crystalline Waterproofing",
-      "subcategory": "Dry shake waterproofing system"
+      "subcategory": "Dry shake waterproofing system",
+      "documents": {
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "PENETRON_PLUS_TDS.pdf",
+          "url": "/documents/penetron/PENETRON_PLUS_TDS.pdf"
+        }
+      }
     },
     {
       "id": "penetron-penebar-sw45",
@@ -2165,7 +2254,19 @@
       "category": "Waterproofing",
       "categorySlug": "waterproofing",
       "type": "Waterstops",
-      "subcategory": "Hydrophilic Waterbars"
+      "subcategory": "Hydrophilic Waterbars",
+      "documents": {
+        "brochure": {
+          "title": "Product Brochure",
+          "fileName": "Penebar_SW_Brochure.pdf",
+          "url": "/documents/penetron/Penebar_SW_Brochure.pdf"
+        },
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "PENEBAR_SW_45_RAPID_TDS.pdf",
+          "url": "/documents/penetron/PENEBAR_SW_45_RAPID_TDS.pdf"
+        }
+      }
     },
     {
       "id": "penetron-penebar-primer",
@@ -2176,7 +2277,14 @@
       "category": "Waterproofing",
       "categorySlug": "waterproofing",
       "type": "Waterstop Accessories",
-      "subcategory": "Primer for Penetron SW45"
+      "subcategory": "Primer for Penetron SW45",
+      "documents": {
+        "datasheet": {
+          "title": "Technical Datasheet (TDS)",
+          "fileName": "PENEBAR_PRIMER_TDS.pdf",
+          "url": "/documents/penetron/PENEBAR_PRIMER_TDS.pdf"
+        }
+      }
     },
     {
       "id": "recron-fiber-6mm-pp-90gms",
@@ -2673,7 +2781,14 @@
         "Structural Repair",
         "Waterproofing"
       ],
-      "productCount": 6
+      "productCount": 6,
+      "documents": {
+        "brochure": {
+          "title": "Alfashield Brand & Product Line Brochure",
+          "fileName": "Alfashield_Brochure.pdf",
+          "url": "/documents/alfashield-polymers/Alfashield_Brochure.pdf"
+        }
+      }
     },
     {
       "id": "apcotex-industries",
@@ -2848,7 +2963,14 @@
         "Structural Repair",
         "Waterproofing"
       ],
-      "productCount": 6
+      "productCount": 6,
+      "documents": {
+        "brochure": {
+          "title": "Penetron System Applications Brochure",
+          "fileName": "Penetron_Applications_Brochure.pdf",
+          "url": "/documents/penetron/Penetron_Applications_Brochure.pdf"
+        }
+      }
     },
     {
       "id": "reliance-recron-fiber",

@@ -33,7 +33,7 @@ const projects = [
   },
   {
     id: 'palwe-house',
-    title: 'Palwe House (Pankaja Mundhe Bunglow)',
+    title: 'Palwe House',
     coverImage: '/images/Palwe House (Pankaja Mundhe Bunglow)-1.jpeg',
     images: [
       '/images/Palwe House (Pankaja Mundhe Bunglow)-1.jpeg',

@@ -49,7 +49,7 @@ export default function AboutPage() {
             {/* Image */}
             <div className="h-full">
               <img
-                src="/images/about-construction.webp"
+                src="/images/aboutpage-image.webp"
                 alt="Construction chemical solutions"
                 className="rounded-2xl shadow-lg w-full h-full object-cover"
               />

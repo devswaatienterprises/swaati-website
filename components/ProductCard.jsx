@@ -82,7 +82,40 @@ export default function ProductCard({ product }) {
       </div>
 
       {/* BOTTOM ACTION AREA */}
-      <div className="pt-5 border-t border-slate-100 mt-auto">
+      <div className="pt-5 border-t border-slate-100 mt-auto space-y-3">
+        {/* Document Download Buttons (Render ONLY if actual documents exist) */}
+        {product.documents && (product.documents.datasheet || product.documents.brochure) && (
+          <div className="flex flex-wrap items-center gap-2">
+            {product.documents.datasheet && (
+              <a
+                href={product.documents.datasheet.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 min-w-[130px] inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs border border-slate-300 transition-colors shadow-2xs text-center"
+              >
+                <svg className="w-4 h-4 text-slate-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>Download Datasheet ↓</span>
+              </a>
+            )}
+
+            {product.documents.brochure && (
+              <a
+                href={product.documents.brochure.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 min-w-[130px] inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-royal-50 hover:bg-royal-100 text-royal-700 font-semibold text-xs border border-royal-200 transition-colors shadow-2xs text-center"
+              >
+                <svg className="w-4 h-4 text-royal-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <span>Download Brochure ↓</span>
+              </a>
+            )}
+          </div>
+        )}
+
         <a
           href={`https://wa.me/919371755337?text=${encodeURIComponent(`Hello Swaati Enterprises, I would like to request a quotation for ${product.name}.`)}`}
           target="_blank"

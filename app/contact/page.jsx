@@ -99,6 +99,11 @@ export default function ContactPage() {
                         +91 83800 17333
                       </a>
                     </p>
+                    <p className="text-slate-600 text-sm">
+                      <a href="tel:+919130355119" className="hover:text-royal-600 transition-colors font-medium">
+                        +91 91303 55119
+                      </a>
+                    </p>
                   </div>
                 </div>
 

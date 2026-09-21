@@ -338,7 +338,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="/images/home-about.webp"
+                  src="/images/homepage-about-section-image.webp"
                   alt="Swaati Enterprises Construction Solutions"
                   className="w-full h-full object-cover"
                 />

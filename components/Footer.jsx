@@ -64,7 +64,8 @@ export default function Footer() {
               </li>
               <li>
                 📞 <a href="tel:+919370011133" className="hover:text-white transition-colors">+91 93700 11133</a><br />
-                📞 <a href="tel:+918380017333" className="hover:text-white transition-colors">+91 83800 17333</a>
+                📞 <a href="tel:+918380017333" className="hover:text-white transition-colors">+91 83800 17333</a><br />
+                📞 <a href="tel:+919130355119" className="hover:text-white transition-colors">+91 91303 55119</a>
               </li>
               <li>
                 ✉ <a href="mailto:swaatienterprises@gmail.com" className="hover:text-white transition-colors">

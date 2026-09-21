@@ -17,6 +17,10 @@ export default function TopBar() {
             <a href="tel:+919370011133" className="hover:text-royal-300 transition-colors">
               +91 93700 11133
             </a>
+            <span className="text-royal-400">/</span>
+            <a href="tel:+919130355119" className="hover:text-royal-300 transition-colors">
+              +91 91303 55119
+            </a>
           </span>
 
           {/* Email */}

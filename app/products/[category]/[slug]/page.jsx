@@ -213,6 +213,49 @@ export default function ProductDetailPage({ params }) {
                   </div>
                 </div>
 
+                {/* Technical Documents & Downloads (Render ONLY if actual files exist) */}
+                {product.documents && (product.documents.brochure || product.documents.datasheet) && (
+                  <div className="pt-6 border-t border-slate-100">
+                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 pb-2 border-b border-slate-100">
+                      Technical Documents
+                    </h3>
+
+                    <div className="flex flex-wrap gap-4">
+                      {/* Product Brochure */}
+                      {product.documents.brochure && (
+                        <a
+                          href={product.documents.brochure.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-royal-50 hover:bg-royal-100 text-royal-700 font-semibold text-sm border border-royal-200 transition-colors shadow-xs"
+                        >
+                          <svg className="w-5 h-5 text-royal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          <span>Product Brochure</span>
+                          <span className="text-xs text-royal-500 font-normal">(PDF)</span>
+                        </a>
+                      )}
+
+                      {/* Technical Datasheet (TDS) */}
+                      {product.documents.datasheet && (
+                        <a
+                          href={product.documents.datasheet.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-sm border border-slate-300 transition-colors shadow-xs"
+                        >
+                          <svg className="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          <span>Technical Datasheet</span>
+                          <span className="text-xs text-slate-500 font-normal">(PDF)</span>
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                )}
+
                 {/* Swaati Enterprises Supply Assurance */}
                 <div className="pt-6 border-t border-slate-100">
                   <div className="flex flex-wrap gap-4 text-xs font-semibold text-slate-700">

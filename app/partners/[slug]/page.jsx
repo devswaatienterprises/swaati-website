@@ -140,6 +140,27 @@ export default function PartnerDetailPage({ params }) {
                 Through this partnership, we ensure direct factory sourcing, authentic quality assurance, up-to-date technical datasheets, and hands-on site support for contractors, engineers, and developers across Western India.
               </p>
             </div>
+
+            {/* Brand Documents Section (Render ONLY if actual partner brand brochure exists) */}
+            {partner.documents && partner.documents.brochure && (
+              <div className="mt-6 pt-6 border-t border-slate-100">
+                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">
+                  Brand &amp; Technical Documents
+                </h3>
+                <a
+                  href={partner.documents.brochure.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-royal-50 hover:bg-royal-100 text-royal-700 font-semibold text-sm border border-royal-200 transition-colors shadow-xs"
+                >
+                  <svg className="w-5 h-5 text-royal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <span>{partner.documents.brochure.title || 'Brand Applications & Technical Brochure'}</span>
+                  <span className="text-xs text-royal-500 font-normal">(PDF)</span>
+                </a>
+              </div>
+            )}
           </div>
 
           {/* Products We Serve Section */}
