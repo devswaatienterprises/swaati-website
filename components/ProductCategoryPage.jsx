@@ -7,7 +7,7 @@ import ProductCard from '@/components/ProductCard';
 const getApiBaseUrl = () => {
   if (process.env.NEXT_PUBLIC_API_URL) return process.env.NEXT_PUBLIC_API_URL.replace(/\/+$/, '');
   if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-    return 'https://swaati-sems-api.onrender.com/api/v1';
+    return 'https://api.swaatienterprises.com/api/v1';
   }
   return 'http://localhost:4000/api/v1';
 };
