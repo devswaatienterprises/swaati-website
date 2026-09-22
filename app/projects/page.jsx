@@ -11,12 +11,12 @@ export default function ProjectsPage() {
   return (
     <>
       {/* Projects Page Header */}
-      <section className="hero-gradient py-20 relative overflow-hidden">
+      <section className="hero-gradient py-12 sm:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
           <div className="flex items-center gap-2 text-royal-300 text-sm mb-4">
             <Link href="/" className="hover:text-white transition-colors">
               Home
@@ -27,45 +27,45 @@ export default function ProjectsPage() {
             <span className="text-white">Projects</span>
           </div>
 
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
             Our Project Portfolio
           </h1>
 
-          <p className="text-xl text-royal-200 max-w-3xl">
+          <p className="text-base sm:text-xl text-royal-200 max-w-3xl">
             Discover some of the projects where our construction chemical solutions have helped deliver durable, high-performance results across infrastructure, industrial and commercial developments.
           </p>
         </div>
       </section>
 
       {/* Main Project Showcase Section */}
-      <section className="py-16 lg:py-24 bg-slate-50 min-h-screen">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-12 sm:py-16 lg:py-24 bg-slate-50 min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <ProjectShowcase />
         </div>
       </section>
 
       {/* Technical Consultation CTA */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-gradient-to-r from-royal-700 to-royal-900 rounded-2xl p-10 lg:p-12 text-center">
-            <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="bg-gradient-to-r from-royal-700 to-royal-900 rounded-2xl p-6 sm:p-10 lg:p-12 text-center">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4">
               Planning a Similar Construction or Repair Project?
             </h2>
-            <p className="text-royal-200 mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-royal-200 text-sm sm:text-base mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
               Our technical team provides material specification recommendations, site evaluation, and authorized supply support.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
               <a
                 href="https://wa.me/919371755337?text=Hello%20Swaati%20Enterprises%2C%20I%20would%20like%20to%20consult%20about%20a%20project."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-royal-700 px-8 py-4 rounded-lg font-semibold hover:bg-royal-50 transition-all inline-block shadow-lg"
+                className="bg-white text-royal-700 px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold hover:bg-royal-50 transition-all inline-block shadow-lg text-center w-full sm:w-auto"
               >
                 Consult on WhatsApp
               </a>
               <a
                 href="tel:+919370011133"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-royal-700 transition-all inline-block"
+                className="border-2 border-white text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-royal-700 transition-all inline-block text-center w-full sm:w-auto"
               >
                 Call +91 93700 11133
               </a>

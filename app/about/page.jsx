@@ -9,17 +9,17 @@ export default function AboutPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="hero-gradient py-20 relative overflow-hidden">
+      <section className="hero-gradient py-12 sm:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
           <div className="max-w-3xl">
-            <span className="text-royal-300 font-semibold text-sm tracking-wider uppercase">About Us</span>
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mt-3 mb-4">
+            <span className="text-royal-300 font-semibold text-xs sm:text-sm tracking-wider uppercase">About Us</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mt-2 sm:mt-3 mb-3 sm:mb-4 leading-tight">
               Building Reliable Construction Solutions
             </h1>
-            <p className="text-xl text-royal-200">
+            <p className="text-base sm:text-xl text-royal-200">
               Learn about our journey, values, and commitment to delivering quality construction chemical solutions.
             </p>
           </div>
@@ -27,31 +27,31 @@ export default function AboutPage() {
       </section>
 
       {/* Company Overview */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-12 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Content */}
             <div>
-              <h2 className="text-3xl font-bold text-slate-800 mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-4 sm:mb-6">
                 About Swaati Enterprises
               </h2>
-              <p className="text-slate-600 leading-relaxed mb-4">
+              <p className="text-slate-600 leading-relaxed text-sm sm:text-base mb-4">
                 Swaati Enterprises is a trusted construction solutions provider based in Chinchwad, Pune. We specialize in construction chemicals, structural repair solutions and engineering services that support modern building and infrastructure projects.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-4">
+              <p className="text-slate-600 leading-relaxed text-sm sm:text-base mb-4">
                 Our expertise covers demolition work, waterproofing systems, epoxy flooring, in-situ FRP sections, concrete core cutting and chemical anchoring solutions. We focus on delivering solutions that improve structural durability, efficiency and long term performance of construction projects.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-6">
+              <p className="text-slate-600 leading-relaxed text-sm sm:text-base mb-6">
                 At Swaati Enterprises we believe in delivering more than just products and services. Our goal is to add value through reliable materials, practical expertise and consistent technical support for builders, contractors and engineers.
               </p>
             </div>
 
             {/* Image */}
-            <div className="h-full">
+            <div className="w-full">
               <img
                 src="/images/aboutpage-image.webp"
                 alt="Construction chemical solutions"
-                className="rounded-2xl shadow-lg w-full h-full object-cover"
+                className="rounded-2xl shadow-lg w-full h-auto max-h-[480px] object-cover"
               />
             </div>
           </div>

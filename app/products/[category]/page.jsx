@@ -36,14 +36,14 @@ export default function CategoryProductsPage({ params }) {
   return (
     <>
       {/* Header */}
-      <section className="hero-gradient py-20 relative overflow-hidden">
+      <section className="hero-gradient py-12 sm:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 text-royal-300 text-sm mb-4">
+          <div className="flex flex-wrap items-center gap-2 text-royal-300 text-sm mb-4">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
@@ -56,30 +56,30 @@ export default function CategoryProductsPage({ params }) {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-white">{category.name}</span>
+            <span className="text-white truncate max-w-[150px] sm:max-w-none">{category.name}</span>
           </div>
 
-          <div className="flex items-center gap-3 mb-3">
+          <div className="flex flex-wrap items-center gap-3 mb-3">
             <span className="inline-flex items-center text-xs font-semibold px-3 py-1 rounded-full bg-royal-800 text-royal-200">
               {category.productCount} {category.productCount === 1 ? 'Product' : 'Products'}
             </span>
           </div>
 
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
             {category.name}
           </h1>
 
-          <p className="text-xl text-royal-200 max-w-3xl">
+          <p className="text-base sm:text-xl text-royal-200 max-w-3xl">
             Explore certified {category.name.toLowerCase()} solutions supplied and distributed across Pune &amp; Western Maharashtra.
           </p>
         </div>
       </section>
 
       {/* Category Products Listing */}
-      <section className="py-16 bg-slate-50 min-h-screen">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-12 sm:py-16 bg-slate-50 min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Sub-header with Back Navigation */}
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-8 pb-4 border-b border-slate-200">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-8 pb-4 border-b border-slate-200">
             <div>
               <Link
                 href="/products"
@@ -88,18 +88,18 @@ export default function CategoryProductsPage({ params }) {
                 <span>←</span>
                 <span>Back to All Categories</span>
               </Link>
-              <h2 className="text-xl font-bold text-slate-800 mt-2">
+              <h2 className="text-lg sm:text-xl font-bold text-slate-800 mt-2">
                 {category.name} Products
               </h2>
             </div>
-            <span className="text-xs font-medium text-slate-500 bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+            <span className="text-xs font-medium text-slate-500 bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm self-start sm:self-auto">
               Showing {categoryProducts.length} of {category.productCount} products
             </span>
           </div>
 
           {/* 2-Column Product Grid */}
           {categoryProducts.length === 0 ? (
-            <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center my-8">
+            <div className="bg-white rounded-2xl border border-slate-200 p-8 sm:p-12 text-center my-8">
               <h3 className="text-lg font-bold text-slate-800 mb-2">No Products Found</h3>
               <p className="text-slate-600 text-sm max-w-md mx-auto mb-6">
                 No products are currently listed under this category.
@@ -139,27 +139,27 @@ export default function CategoryProductsPage({ params }) {
       </section>
 
       {/* Technical Support CTA */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-gradient-to-r from-royal-700 to-royal-900 rounded-2xl p-12 text-center">
-            <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="bg-gradient-to-r from-royal-700 to-royal-900 rounded-2xl p-6 sm:p-12 text-center">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4">
               Need Technical Advice for {category.name}?
             </h2>
-            <p className="text-royal-200 mb-8 max-w-2xl mx-auto">
+            <p className="text-royal-200 text-sm sm:text-base mb-6 sm:mb-8 max-w-2xl mx-auto">
               Our engineering team provides material specifications, application guidelines, and site support.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
               <a
                 href={`https://wa.me/919371755337?text=${encodeURIComponent(`Hello Swaati Enterprises, I would like technical support for ${category.name}.`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-royal-700 px-8 py-4 rounded-lg font-semibold hover:bg-royal-50 transition-all inline-block shadow-lg"
+                className="bg-white text-royal-700 px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold hover:bg-royal-50 transition-all inline-block shadow-lg text-center w-full sm:w-auto"
               >
                 Request Support via WhatsApp
               </a>
               <a
                 href="tel:+919370011133"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-royal-700 transition-all inline-block"
+                className="border-2 border-white text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-royal-700 transition-all inline-block text-center w-full sm:w-auto"
               >
                 Call +91 93700 11133
               </a>

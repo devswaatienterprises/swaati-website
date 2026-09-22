@@ -195,16 +195,18 @@ input:focus, textarea:focus, select:focus {
   box-shadow: 0 0 0 3px rgba(30, 42, 143, 0.1);
 }
 
-.process-step::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -50%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, #1e2a8f, transparent);
-}
+@media (min-width: 768px) {
+  .process-step::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #1e2a8f, transparent);
+  }
 
-.process-step:last-child::before {
-  display: none;
+  .process-step:last-child::before {
+    display: none;
+  }
 }

@@ -139,43 +139,43 @@ export default function ProjectShowcase() {
       {/* MINIMAL FULL-SCREEN LIGHTBOX MODAL */}
       {activeProject && (
         <div
-          className="fixed inset-0 z-[100] flex flex-col justify-between bg-slate-950/95 backdrop-blur-sm p-4 sm:p-6 lg:p-8 animate-fade-in"
+          className="fixed inset-0 z-[100] flex flex-col justify-between bg-slate-950/95 backdrop-blur-sm p-3 sm:p-6 lg:p-8 animate-fade-in"
           onClick={closeLightbox}
         >
           {/* Top Bar: Project Title & Close Button */}
           <div
-            className="flex items-center justify-between text-white pb-4 border-b border-white/10 relative z-10 max-w-5xl mx-auto w-full"
+            className="flex items-center justify-between text-white pb-3 sm:pb-4 border-b border-white/10 relative z-10 max-w-5xl mx-auto w-full"
             onClick={(e) => e.stopPropagation()}
           >
-            <div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-royal-400">
+            <div className="min-w-0 flex-1 pr-2">
+              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-royal-400 block">
                 Project Gallery
               </span>
-              <h4 className="text-base sm:text-lg font-bold text-white mt-0.5">
+              <h4 className="text-sm sm:text-lg font-bold text-white mt-0.5 truncate">
                 {activeProject.title}
               </h4>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
               <span className="text-xs sm:text-sm text-slate-400 font-mono">
                 {activeImageIndex + 1} / {activeProject.images.length}
               </span>
               <button
                 type="button"
                 onClick={closeLightbox}
-                className="rounded-full bg-white/10 p-2 text-slate-300 hover:bg-white/20 hover:text-white transition-colors"
+                className="rounded-full bg-white/10 p-1.5 sm:p-2 text-slate-300 hover:bg-white/20 hover:text-white transition-colors"
                 aria-label="Close Gallery"
               >
-                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
           </div>
 
-          {/* Main Image View with Sensible Maximum Dimensions (No pixelation) */}
+          {/* Main Image View with Sensible Maximum Dimensions */}
           <div
-            className="relative flex flex-1 items-center justify-center my-4 overflow-hidden max-w-5xl mx-auto w-full"
+            className="relative flex flex-1 items-center justify-center my-2 sm:my-4 overflow-hidden max-w-5xl mx-auto w-full"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Previous Button */}
@@ -183,22 +183,22 @@ export default function ProjectShowcase() {
               <button
                 type="button"
                 onClick={prevImage}
-                className="absolute left-2 sm:left-4 z-20 rounded-full bg-slate-900/80 p-3 text-white backdrop-blur-md border border-white/10 hover:bg-royal-600 hover:border-royal-600 transition-all shadow-lg"
+                className="absolute left-1 sm:left-4 z-20 rounded-full bg-slate-900/80 p-2 sm:p-3 text-white backdrop-blur-md border border-white/10 hover:bg-royal-600 hover:border-royal-600 transition-all shadow-lg"
                 aria-label="Previous Photograph"
               >
-                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="h-4 w-4 sm:h-5 sm:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
             )}
 
             {/* Crisp Native Sized Image Container */}
-            <div className="relative max-h-[72vh] max-w-[85vw] md:max-w-2xl lg:max-w-3xl flex items-center justify-center">
+            <div className="relative max-h-[62vh] sm:max-h-[72vh] max-w-[88vw] md:max-w-2xl lg:max-w-3xl flex items-center justify-center">
               <img
                 key={activeProject.images[activeImageIndex]}
                 src={activeProject.images[activeImageIndex]}
                 alt={`${activeProject.title} - Photograph ${activeImageIndex + 1}`}
-                className="max-h-[72vh] max-w-full object-contain rounded-xl shadow-2xl animate-fade-in"
+                className="max-h-[62vh] sm:max-h-[72vh] max-w-full object-contain rounded-xl shadow-2xl animate-fade-in"
               />
             </div>
 
@@ -207,10 +207,10 @@ export default function ProjectShowcase() {
               <button
                 type="button"
                 onClick={nextImage}
-                className="absolute right-2 sm:right-4 z-20 rounded-full bg-slate-900/80 p-3 text-white backdrop-blur-md border border-white/10 hover:bg-royal-600 hover:border-royal-600 transition-all shadow-lg"
+                className="absolute right-1 sm:right-4 z-20 rounded-full bg-slate-900/80 p-2 sm:p-3 text-white backdrop-blur-md border border-white/10 hover:bg-royal-600 hover:border-royal-600 transition-all shadow-lg"
                 aria-label="Next Photograph"
               >
-                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="h-4 w-4 sm:h-5 sm:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
                 </svg>
               </button>
@@ -219,7 +219,7 @@ export default function ProjectShowcase() {
 
           {/* Bottom Thumbnail Strip */}
           <div
-            className="pt-3 border-t border-white/10 flex items-center justify-center gap-2 overflow-x-auto pb-1 relative z-10 max-w-5xl mx-auto w-full"
+            className="pt-2 sm:pt-3 border-t border-white/10 flex items-center justify-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 relative z-10 max-w-5xl mx-auto w-full"
             onClick={(e) => e.stopPropagation()}
           >
             {activeProject.images.map((img, idx) => (
@@ -227,7 +227,7 @@ export default function ProjectShowcase() {
                 key={idx}
                 type="button"
                 onClick={() => setActiveImageIndex(idx)}
-                className={`relative h-12 w-16 sm:h-14 sm:w-20 flex-shrink-0 overflow-hidden rounded-lg border-2 transition-all ${
+                className={`relative h-10 w-14 sm:h-14 sm:w-20 flex-shrink-0 overflow-hidden rounded-lg border-2 transition-all ${
                   activeImageIndex === idx
                     ? 'border-royal-400 scale-105 opacity-100 shadow'
                     : 'border-transparent opacity-50 hover:opacity-80'

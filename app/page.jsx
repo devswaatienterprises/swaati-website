@@ -146,23 +146,19 @@ export default function HomePage() {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#1e2a8f] rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2 opacity-25"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 py-20 lg:py-28 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 lg:py-28 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-fade-in">
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-6" id="hero-headline">
-                Construction <br />
-                Chemicals &amp; <br />
-                Engineering <br />
-                Solutions <br />
-                You Can Rely On!
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6" id="hero-headline">
+                Construction Chemicals &amp; Engineering Solutions You Can Rely On!
               </h1>
-              <p className="text-xl text-royal-200 mb-8 leading-relaxed" id="hero-subtext">
+              <p className="text-base sm:text-xl text-royal-200 mb-6 sm:mb-8 leading-relaxed" id="hero-subtext">
                 We supply proven solutions for waterproofing, concrete performance, epoxy flooring, structural repair and industrial protection, helping builders and contractors deliver stronger, longer-lasting structures.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link
                   href="/products"
-                  className="bg-white text-royal-700 px-8 py-4 rounded-lg font-semibold hover:bg-royal-50 transition-all transform hover:scale-105 shadow-lg"
+                  className="bg-white text-royal-700 px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold hover:bg-royal-50 transition-all transform hover:scale-105 shadow-lg text-center w-full sm:w-auto"
                 >
                   Explore Products
                 </Link>
@@ -170,7 +166,7 @@ export default function HomePage() {
                   href="https://wa.me/919371755337?text=Hello%20Swaati%20Enterprises%2C%20I%20would%20like%20to%20get%20a%20quote."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-royal-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-royal-700 transition-all transform hover:scale-105 shadow-lg inline-block"
+                  className="bg-royal-600 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold hover:bg-royal-700 transition-all transform hover:scale-105 shadow-lg inline-block text-center w-full sm:w-auto"
                 >
                   Request Quotation
                 </a>
@@ -343,9 +339,9 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-royal-600 text-white p-6 rounded-xl shadow-xl">
-                <div className="text-3xl font-bold">20+</div>
-                <div className="text-royal-200 text-sm">Years of Excellence</div>
+              <div className="absolute bottom-2 left-2 sm:-bottom-6 sm:-left-6 bg-royal-600 text-white p-4 sm:p-6 rounded-xl shadow-xl">
+                <div className="text-2xl sm:text-3xl font-bold">20+</div>
+                <div className="text-royal-200 text-xs sm:text-sm">Years of Excellence</div>
               </div>
             </div>
           </div>
@@ -354,7 +350,7 @@ export default function HomePage() {
 
       {/* Solutions Section */}
       <section className="py-20 bg-slate-50 geometric-pattern">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-16">
             <span className="text-royal-600 font-semibold text-sm tracking-wider uppercase">Our Solutions</span>
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mt-3 mb-4">
@@ -392,8 +388,8 @@ export default function HomePage() {
 
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <span className="text-royal-600 font-semibold text-sm tracking-wider uppercase">Why Choose Us</span>
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mt-3 mb-8">
@@ -413,22 +409,22 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="bg-royal-600 text-white p-8 rounded-xl">
-                <div className="text-4xl font-bold mb-2">6500+</div>
-                <div className="text-royal-200">Projects Delivered</div>
+            <div className="grid grid-cols-2 gap-3 sm:gap-6">
+              <div className="bg-royal-600 text-white p-4 sm:p-8 rounded-xl">
+                <div className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">6500+</div>
+                <div className="text-royal-200 text-xs sm:text-base">Projects Delivered</div>
               </div>
-              <div className="bg-slate-100 p-8 rounded-xl">
-                <div className="text-4xl font-bold text-royal-600 mb-2">240+</div>
-                <div className="text-slate-600">Certified Products</div>
+              <div className="bg-slate-100 p-4 sm:p-8 rounded-xl">
+                <div className="text-2xl sm:text-4xl font-bold text-royal-600 mb-1 sm:mb-2">240+</div>
+                <div className="text-slate-600 text-xs sm:text-base">Certified Products</div>
               </div>
-              <div className="bg-slate-100 p-8 rounded-xl">
-                <div className="text-4xl font-bold text-royal-600 mb-2">20+</div>
-                <div className="text-slate-600">Years Experience</div>
+              <div className="bg-slate-100 p-4 sm:p-8 rounded-xl">
+                <div className="text-2xl sm:text-4xl font-bold text-royal-600 mb-1 sm:mb-2">20+</div>
+                <div className="text-slate-600 text-xs sm:text-base">Years Experience</div>
               </div>
-              <div className="bg-royal-600 text-white p-8 rounded-xl">
-                <div className="text-4xl font-bold mb-2">5000+</div>
-                <div className="text-royal-200">Happy Clients</div>
+              <div className="bg-royal-600 text-white p-4 sm:p-8 rounded-xl">
+                <div className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">5000+</div>
+                <div className="text-royal-200 text-xs sm:text-base">Happy Clients</div>
               </div>
             </div>
           </div>
@@ -437,16 +433,16 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-royal-700 to-royal-900">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="text-center lg:text-left">
               <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">Need Help Choosing the Right Product?</h2>
               <p className="text-royal-200">Our technical team can help you select the best solution for your project requirements.</p>
             </div>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 w-full sm:w-auto">
               <a
                 href="tel:+919370011133"
-                className="bg-white text-royal-700 px-8 py-4 rounded-lg font-semibold hover:bg-royal-50 transition-all flex items-center gap-2"
+                className="bg-white text-royal-700 px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold hover:bg-royal-50 transition-all flex items-center justify-center gap-2 w-full sm:w-auto text-center"
               >
                 <svg width="20" height="20" className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -457,7 +453,7 @@ export default function HomePage() {
                 href="https://wa.me/919371755337?text=Hello%20Swaati%20Enterprises%2C%20I%20would%20like%20to%20get%20a%20quote."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-royal-700 transition-all flex items-center gap-2"
+                className="border-2 border-white text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-royal-700 transition-all flex items-center justify-center gap-2 w-full sm:w-auto text-center"
               >
                 <svg width="20" height="20" className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

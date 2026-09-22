@@ -37,12 +37,12 @@ export default function PartnersPage() {
   return (
     <>
       {/* Partners Page Header */}
-      <section className="hero-gradient py-20 relative overflow-hidden">
+      <section className="hero-gradient py-12 sm:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
           {/* Breadcrumbs */}
           <div className="flex items-center gap-2 text-royal-300 text-sm mb-4">
             <Link href="/" className="hover:text-white transition-colors">
@@ -54,33 +54,33 @@ export default function PartnersPage() {
             <span className="text-white">Partners</span>
           </div>
 
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
             Authorised Brand Partners
           </h1>
 
-          <p className="text-xl text-royal-200 max-w-3xl">
+          <p className="text-base sm:text-xl text-royal-200 max-w-3xl">
             We partner with industry-leading manufacturers to supply certified construction chemicals, waterproofing systems, and structural engineering materials.
           </p>
         </div>
       </section>
 
       {/* Partners Grid: Exactly 3 Columns on Desktop, 2 on Tablet, 1 on Mobile */}
-      <section className="py-20 bg-slate-50 min-h-screen">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-royal-600 font-semibold text-sm tracking-wider uppercase">
+      <section className="py-12 sm:py-20 bg-slate-50 min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+            <span className="text-royal-600 font-semibold text-xs sm:text-sm tracking-wider uppercase">
               Authorised Brand Network
             </span>
-            <h2 className="text-3xl font-bold text-slate-800 mt-2 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-800 mt-2 mb-3 sm:mb-4">
               Trusted Partnerships with Industry Leaders
             </h2>
-            <p className="text-slate-600 text-sm">
+            <p className="text-slate-600 text-xs sm:text-sm">
               Explore our authorised manufacturer partner brands and browse certified products supplied directly for your projects.
             </p>
           </div>
 
           {/* 4-COLUMN DESKTOP GRID */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {partners.map((partner) => (
               <Link
                 key={partner.slug}

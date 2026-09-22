@@ -11,12 +11,12 @@ export default function QuotePage() {
   return (
     <>
       {/* Header */}
-      <section className="hero-gradient py-20 relative overflow-hidden">
+      <section className="hero-gradient py-12 sm:py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
           <div className="flex items-center gap-2 text-royal-300 text-sm mb-4">
             <Link href="/" className="hover:text-white transition-colors">
               Home
@@ -27,23 +27,23 @@ export default function QuotePage() {
             <span className="text-white">Get Quote</span>
           </div>
 
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
             Request a Quotation
           </h1>
 
-          <p className="text-xl text-royal-200 max-w-3xl">
+          <p className="text-base sm:text-xl text-royal-200 max-w-3xl">
             Have a project requirement or need technical assistance? Our team is ready to help you with the right construction chemical solutions.
           </p>
         </div>
       </section>
 
       {/* Content */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-3 gap-12">
+      <section className="py-12 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
             {/* Contact Info Sidebar */}
             <div className="lg:col-span-1">
-              <h2 className="text-2xl font-bold text-slate-800 mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-800 mb-6">
                 Direct Contact
               </h2>
 
@@ -138,8 +138,8 @@ export default function QuotePage() {
 
             {/* Quotation Form */}
             <div className="lg:col-span-2">
-              <div className="bg-slate-50 rounded-2xl p-8 lg:p-10 border border-slate-200 shadow-sm">
-                <h2 className="text-2xl font-bold text-slate-800 mb-2">
+              <div className="bg-slate-50 rounded-2xl p-4 sm:p-8 lg:p-10 border border-slate-200 shadow-sm">
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-800 mb-2">
                   Send Project Requirement
                 </h2>
                 <p className="text-slate-500 text-sm mb-6">

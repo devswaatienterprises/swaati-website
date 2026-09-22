@@ -55,9 +55,9 @@ export default function PartnerDetailPage({ params }) {
           <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-royal-300 text-sm mb-4">
+          <div className="flex flex-wrap items-center gap-2 text-royal-300 text-sm mb-4">
             <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
@@ -70,7 +70,7 @@ export default function PartnerDetailPage({ params }) {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-white">{partner.name}</span>
+            <span className="text-white truncate max-w-[150px] sm:max-w-none">{partner.name}</span>
           </div>
 
           <div className="flex flex-wrap items-center gap-3 mb-3">
@@ -82,21 +82,21 @@ export default function PartnerDetailPage({ params }) {
             </span>
           </div>
 
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">{partner.name}</h1>
-          <p className="text-xl text-royal-200 max-w-3xl">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">{partner.name}</h1>
+          <p className="text-base sm:text-xl text-royal-200 max-w-3xl">
             Authorised distribution, technical material supply and engineering support for {partner.name} products.
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-16 bg-slate-50 min-h-screen">
-        <div className="max-w-7xl mx-auto px-6 space-y-12">
+      <section className="py-12 sm:py-16 bg-slate-50 min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-8 sm:space-y-12">
           {/* Our Connection Section */}
-          <div className="bg-white rounded-2xl p-8 lg:p-10 border border-slate-200 shadow-sm">
+          <div className="bg-white rounded-2xl p-4 sm:p-8 lg:p-10 border border-slate-200 shadow-sm">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-slate-100 mb-6">
               <div className="flex items-center gap-4">
-                <div className="w-20 h-20 rounded-2xl bg-white p-2 border border-slate-200 flex items-center justify-center flex-shrink-0 shadow-xs">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white p-2 border border-slate-200 flex items-center justify-center flex-shrink-0 shadow-xs">
                   <img
                     src={partner.image}
                     alt={`${partner.name} Logo`}
@@ -104,25 +104,25 @@ export default function PartnerDetailPage({ params }) {
                   />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-slate-800">{partner.name}</h2>
-                  <span className="text-sm font-semibold text-royal-600">
+                  <h2 className="text-xl sm:text-2xl font-bold text-slate-800">{partner.name}</h2>
+                  <span className="text-xs sm:text-sm font-semibold text-royal-600">
                     Official {partner.relationship || 'Authorised Distributor'}
                   </span>
                 </div>
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href={`https://wa.me/919371755337?text=${encodeURIComponent(`Hello Swaati Enterprises, I would like to get a quote for ${partner.name}.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary text-white text-xs font-semibold px-5 py-2.5 rounded-lg shadow inline-flex items-center"
+                  className="btn-primary text-white text-xs font-semibold px-5 py-2.5 rounded-lg shadow inline-flex items-center justify-center text-center"
                 >
                   Inquire for {partner.name}
                 </a>
                 <Link
                   href={`/products?company=${encodeURIComponent(partner.name)}`}
-                  className="btn-secondary text-royal-700 text-xs font-semibold px-5 py-2.5 rounded-lg"
+                  className="btn-secondary text-royal-700 text-xs font-semibold px-5 py-2.5 rounded-lg text-center"
                 >
                   View in Catalogue
                 </Link>
@@ -133,10 +133,10 @@ export default function PartnerDetailPage({ params }) {
               <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
                 Our Connection
               </h3>
-              <p className="text-slate-700 text-base leading-relaxed mb-4">
+              <p className="text-slate-700 text-sm sm:text-base leading-relaxed mb-4">
                 Swaati Enterprises is an authorised distributor/channel partner for {partner.name}, serving customers with their relevant construction and speciality product solutions.
               </p>
-              <p className="text-slate-600 text-sm leading-relaxed">
+              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                 Through this partnership, we ensure direct factory sourcing, authentic quality assurance, up-to-date technical datasheets, and hands-on site support for contractors, engineers, and developers across Western India.
               </p>
             </div>
@@ -151,13 +151,13 @@ export default function PartnerDetailPage({ params }) {
                   href={partner.documents.brochure.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-royal-50 hover:bg-royal-100 text-royal-700 font-semibold text-sm border border-royal-200 transition-colors shadow-xs"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-royal-50 hover:bg-royal-100 text-royal-700 font-semibold text-xs sm:text-sm border border-royal-200 transition-colors shadow-xs max-w-full"
                 >
-                  <svg className="w-5 h-5 text-royal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-royal-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  <span>{partner.documents.brochure.title || 'Brand Applications & Technical Brochure'}</span>
-                  <span className="text-xs text-royal-500 font-normal">(PDF)</span>
+                  <span className="truncate">{partner.documents.brochure.title || 'Brand Applications & Technical Brochure'}</span>
+                  <span className="text-xs text-royal-500 font-normal flex-shrink-0">(PDF)</span>
                 </a>
               </div>
             )}
@@ -167,21 +167,21 @@ export default function PartnerDetailPage({ params }) {
           <div>
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
               <div>
-                <h2 className="text-2xl lg:text-3xl font-bold text-slate-800">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-800">
                   Products We Serve
                 </h2>
-                <p className="text-slate-500 text-sm mt-1">
+                <p className="text-slate-500 text-xs sm:text-sm mt-1">
                   Complete list of {partner.name} products available from Swaati Enterprises, organised by category.
                 </p>
               </div>
 
-              <div className="text-xs font-semibold text-royal-700 bg-royal-50 border border-royal-200 px-4 py-2 rounded-lg">
+              <div className="text-xs font-semibold text-royal-700 bg-royal-50 border border-royal-200 px-4 py-2 rounded-lg self-start md:self-auto">
                 Total: {partnerProducts.length} {partnerProducts.length === 1 ? 'Product' : 'Products'}
               </div>
             </div>
 
             {partnerProducts.length === 0 ? (
-              <div className="bg-white rounded-xl p-12 text-center border border-slate-200">
+              <div className="bg-white rounded-xl p-8 sm:p-12 text-center border border-slate-200">
                 <p className="text-slate-600 text-sm">
                   No products currently listed for this partner in the current catalogue version.
                 </p>
@@ -193,11 +193,11 @@ export default function PartnerDetailPage({ params }) {
                 </Link>
               </div>
             ) : (
-              <div className="space-y-12">
+              <div className="space-y-8 sm:space-y-12">
                 {categoryGroups.map(([catName, prods]) => (
-                  <div key={catName} className="space-y-6">
-                    <div className="flex items-center justify-between border-b-2 border-royal-100 pb-3">
-                      <h3 className="text-xl font-bold text-slate-800 flex items-center gap-3">
+                  <div key={catName} className="space-y-4 sm:space-y-6">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b-2 border-royal-100">
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-800 flex flex-wrap items-center gap-2 sm:gap-3">
                         <span>{catName}</span>
                         <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-royal-100 text-royal-700">
                           {prods.length} {prods.length === 1 ? 'Product' : 'Products'}
@@ -205,7 +205,7 @@ export default function PartnerDetailPage({ params }) {
                       </h3>
                       <Link
                         href={`/products?category=${encodeURIComponent(catName)}&company=${encodeURIComponent(partner.name)}`}
-                        className="text-xs font-semibold text-royal-600 hover:text-royal-800"
+                        className="text-xs font-semibold text-royal-600 hover:text-royal-800 flex-shrink-0"
                       >
                         Filter in catalogue →
                       </Link>

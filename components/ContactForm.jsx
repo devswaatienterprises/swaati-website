@@ -82,32 +82,32 @@ export default function ContactForm() {
         </div>
       )}
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         <input
           type="text"
           required
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           placeholder="Your Name *"
-          className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white focus:ring-2 focus:ring-royal-600 focus:outline-none text-slate-800"
+          className="w-full max-w-full px-3.5 sm:px-4 py-3 border border-slate-300 rounded-xl bg-white focus:ring-2 focus:ring-royal-600 focus:outline-none text-slate-800 text-sm sm:text-base"
         />
         <input
           type="text"
           value={formData.companyName}
           onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
           placeholder="Company Name"
-          className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white focus:ring-2 focus:ring-royal-600 focus:outline-none text-slate-800"
+          className="w-full max-w-full px-3.5 sm:px-4 py-3 border border-slate-300 rounded-xl bg-white focus:ring-2 focus:ring-royal-600 focus:outline-none text-slate-800 text-sm sm:text-base"
         />
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         <input
           type="tel"
           required
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           placeholder="Phone Number *"
-          className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white focus:ring-2 focus:ring-royal-600 focus:outline-none text-slate-800"
+          className="w-full max-w-full px-3.5 sm:px-4 py-3 border border-slate-300 rounded-xl bg-white focus:ring-2 focus:ring-royal-600 focus:outline-none text-slate-800 text-sm sm:text-base"
         />
         <input
           type="email"
@@ -115,7 +115,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           placeholder="Email Address *"
-          className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white focus:ring-2 focus:ring-royal-600 focus:outline-none text-slate-800"
+          className="w-full max-w-full px-3.5 sm:px-4 py-3 border border-slate-300 rounded-xl bg-white focus:ring-2 focus:ring-royal-600 focus:outline-none text-slate-800 text-sm sm:text-base"
         />
       </div>
 
@@ -123,7 +123,7 @@ export default function ContactForm() {
         <select
           value={formData.productInterested}
           onChange={(e) => setFormData({ ...formData, productInterested: e.target.value })}
-          className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white focus:ring-2 focus:ring-royal-600 focus:outline-none text-slate-700"
+          className="w-full max-w-full px-3.5 sm:px-4 py-3 border border-slate-300 rounded-xl bg-white focus:ring-2 focus:ring-royal-600 focus:outline-none text-slate-700 text-sm sm:text-base"
         >
           <option value="Waterproofing Systems">Waterproofing Systems (Terrace, Basement, Podium)</option>
           <option value="Concrete Admixtures">Concrete Admixtures & Plasticizers</option>
@@ -141,13 +141,13 @@ export default function ContactForm() {
         value={formData.message}
         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
         placeholder="Please describe your project location and requirement (e.g. area size, dampness problem, specification requirement)..."
-        className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white resize-none focus:ring-2 focus:ring-royal-600 focus:outline-none text-slate-800"
+        className="w-full max-w-full px-3.5 sm:px-4 py-3 border border-slate-300 rounded-xl bg-white resize-none focus:ring-2 focus:ring-royal-600 focus:outline-none text-slate-800 text-sm sm:text-base"
       ></textarea>
 
       <button
         type="submit"
         disabled={status.state === 'submitting'}
-        className="btn-primary text-white px-8 py-4 rounded-lg font-bold shadow-md hover:shadow-lg transition-all"
+        className="btn-primary text-white w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold shadow-md hover:shadow-lg transition-all text-sm sm:text-base text-center"
       >
         {status.state === 'submitting' ? 'Sending Enquiry...' : 'Send Enquiry'}
       </button>

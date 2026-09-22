@@ -81,18 +81,18 @@ function ProductsCatalogueInner({ initialProducts, initialPartners, initialCateg
   return (
     <div className="w-full">
       {/* Search & Filter Section */}
-      <div className="bg-white rounded-2xl border border-slate-200 p-6 lg:p-8 shadow-sm mb-12">
-        <div className="mb-6">
-          <h2 className="text-xl lg:text-2xl font-bold text-slate-800">
+      <div className="bg-white rounded-2xl border border-slate-200 p-4 sm:p-6 lg:p-8 shadow-sm mb-8 sm:mb-12">
+        <div className="mb-4 sm:mb-6">
+          <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-800">
             Search &amp; Filter Products
           </h2>
-          <p className="text-slate-500 text-sm mt-1">
+          <p className="text-slate-500 text-xs sm:text-sm mt-1">
             Search across our entire catalogue by keyword or filter by manufacturer and category.
           </p>
         </div>
 
         {/* Desktop: Clean Horizontal Row | Mobile: Stacked Vertically */}
-        <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-4">
+        <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3 sm:gap-4">
           {/* Search Bar */}
           <div className="relative flex-1">
             <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
@@ -111,7 +111,7 @@ function ProductsCatalogueInner({ initialProducts, initialPartners, initialCateg
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search products..."
-              className="w-full pl-12 pr-10 py-3.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-800 placeholder-slate-400 focus:bg-white focus:border-royal-600 focus:ring-2 focus:ring-royal-100 text-sm md:text-base shadow-sm transition-all"
+              className="w-full pl-11 sm:pl-12 pr-10 py-3 sm:py-3.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-800 placeholder-slate-400 focus:bg-white focus:border-royal-600 focus:ring-2 focus:ring-royal-100 text-sm md:text-base shadow-sm transition-all"
             />
 
             {searchQuery && (
@@ -134,7 +134,7 @@ function ProductsCatalogueInner({ initialProducts, initialPartners, initialCateg
             <select
               value={selectedCompany}
               onChange={(e) => setSelectedCompany(e.target.value)}
-              className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3.5 text-sm text-slate-800 focus:bg-white focus:border-royal-600 focus:ring-2 focus:ring-royal-100 shadow-sm transition-all cursor-pointer"
+              className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 sm:py-3.5 text-xs sm:text-sm text-slate-800 focus:bg-white focus:border-royal-600 focus:ring-2 focus:ring-royal-100 shadow-sm transition-all cursor-pointer"
             >
               <option value="">All Manufacturers</option>
               {companyOptions.map((comp) => (
@@ -151,7 +151,7 @@ function ProductsCatalogueInner({ initialProducts, initialPartners, initialCateg
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3.5 text-sm text-slate-800 focus:bg-white focus:border-royal-600 focus:ring-2 focus:ring-royal-100 shadow-sm transition-all cursor-pointer"
+              className="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 sm:py-3.5 text-xs sm:text-sm text-slate-800 focus:bg-white focus:border-royal-600 focus:ring-2 focus:ring-royal-100 shadow-sm transition-all cursor-pointer"
             >
               <option value="">All Categories</option>
               {categoryOptions.map((cat) => (
@@ -167,7 +167,7 @@ function ProductsCatalogueInner({ initialProducts, initialPartners, initialCateg
             <button
               type="button"
               onClick={handleClearFilters}
-              className="px-5 py-3.5 text-sm font-semibold text-royal-700 bg-royal-50 hover:bg-royal-100 rounded-xl border border-royal-200 transition-colors whitespace-nowrap text-center"
+              className="w-full lg:w-auto px-5 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold text-royal-700 bg-royal-50 hover:bg-royal-100 rounded-xl border border-royal-200 transition-colors whitespace-nowrap text-center"
             >
               Clear Filters
             </button>
@@ -176,7 +176,7 @@ function ProductsCatalogueInner({ initialProducts, initialPartners, initialCateg
 
         {/* Active Filter Indicators */}
         {hasActiveFilters && (
-          <div className="flex flex-wrap items-center gap-2 pt-4 mt-4 border-t border-slate-100 text-xs">
+          <div className="flex flex-wrap items-center gap-2 pt-3 sm:pt-4 mt-3 sm:mt-4 border-t border-slate-100 text-xs">
             <span className="text-slate-400 font-medium">Active filters:</span>
             {searchQuery && (
               <span className="inline-flex items-center gap-1.5 bg-royal-50 text-royal-700 px-3 py-1 rounded-full border border-royal-100 font-medium">

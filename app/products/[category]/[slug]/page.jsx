@@ -44,12 +44,12 @@ export default function ProductDetailPage({ params }) {
   return (
     <>
       {/* Header / Breadcrumb Banner */}
-      <section className="hero-gradient py-16 relative overflow-hidden">
+      <section className="hero-gradient py-12 sm:py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
           {/* Breadcrumbs: Products / Category / Product */}
           <div className="flex flex-wrap items-center gap-2 text-royal-300 text-sm mb-4">
             <Link href="/" className="hover:text-white transition-colors">
@@ -73,7 +73,7 @@ export default function ProductDetailPage({ params }) {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-white truncate max-w-xs">{product.name}</span>
+            <span className="text-white truncate max-w-[120px] sm:max-w-xs">{product.name}</span>
           </div>
 
           <div className="flex flex-wrap items-center gap-3 mb-3">
@@ -95,19 +95,19 @@ export default function ProductDetailPage({ params }) {
             )}
           </div>
 
-          <h1 className="text-3xl lg:text-5xl font-bold text-white mb-4">{product.name}</h1>
-          <p className="text-royal-200 text-lg max-w-3xl">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 leading-snug break-words">{product.name}</h1>
+          <p className="text-royal-200 text-sm sm:text-lg max-w-3xl">
             Supplied and distributed by Swaati Enterprises — authorised channel partner for {product.company}.
           </p>
         </div>
       </section>
 
       {/* Main Detail Section */}
-      <section className="py-16 bg-slate-50 min-h-screen">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-12 sm:py-16 bg-slate-50 min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Main Card */}
-          <div className="product-card bg-white rounded-2xl p-8 lg:p-10 border border-slate-200 shadow-sm mb-12">
-            <div className="grid lg:grid-cols-3 gap-10 items-start">
+          <div className="product-card bg-white rounded-2xl p-4 sm:p-8 lg:p-10 border border-slate-200 shadow-sm mb-8 sm:mb-12">
+            <div className="grid lg:grid-cols-3 gap-8 lg:gap-10 items-start">
               {/* Left 2 Cols: Product Main Info */}
               <div className="lg:col-span-2 space-y-8">
                 {/* Header Info */}
