@@ -53,7 +53,7 @@ export default function Navbar() {
             <div className="flex items-center gap-4">
               <div className="hidden lg:flex items-center">
                 <Link
-                  href="/contact"
+                  href="/quote"
                   className="btn-primary text-white px-6 py-2.5 rounded-lg font-semibold text-sm inline-flex items-center"
                 >
                   Get Quote
@@ -118,7 +118,7 @@ export default function Navbar() {
             </Link>
             <div className="pt-2">
               <Link
-                href="/contact"
+                href="/quote"
                 onClick={() => setMobileMenuOpen(false)}
                 className="btn-primary block text-center text-white px-6 py-2.5 rounded-lg font-semibold text-sm"
               >

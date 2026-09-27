@@ -149,10 +149,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 lg:py-28 relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="animate-fade-in">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6" id="hero-headline">
+              <h1 className="text-2xl sm:text-[1.8rem] lg:text-[2.4rem] xl:text-5xl font-bold text-white leading-tight mb-4 sm:mb-6" id="hero-headline">
                 Construction Chemicals &amp; Engineering Solutions You Can Rely On!
               </h1>
-              <p className="text-base sm:text-xl text-royal-200 mb-6 sm:mb-8 leading-relaxed" id="hero-subtext">
+              <p className="text-[0.8rem] sm:text-base text-royal-200 mb-6 sm:mb-8 leading-relaxed max-w-[440px]" id="hero-subtext">
                 We supply proven solutions for waterproofing, concrete performance, epoxy flooring, structural repair and industrial protection, helping builders and contractors deliver stronger, longer-lasting structures.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -182,15 +182,15 @@ export default function HomePage() {
                     </div>
                     <div className="bg-white/10 rounded-xl p-6 text-center">
                       <div className="text-4xl font-bold text-white mb-2">6500+</div>
-                      <div className="text-royal-200 text-sm">Projects Completed</div>
+                      <div className="text-royal-200 text-sm">Satisfied Clients</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-6 text-center">
-                      <div className="text-4xl font-bold text-white mb-2">240+</div>
-                      <div className="text-royal-200 text-sm">Certified Products</div>
+                      <div className="text-4xl font-bold text-white mb-2">15+</div>
+                      <div className="text-royal-200 text-sm">Renowned Manufacturers</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-6 text-center">
                       <div className="text-4xl font-bold text-white mb-2">50+</div>
-                      <div className="text-royal-200 text-sm">Expert Engineers</div>
+                      <div className="text-royal-200 text-sm">Project Completed</div>
                     </div>
                   </div>
                 </div>
@@ -220,7 +220,7 @@ export default function HomePage() {
             <h2 className="text-2xl lg:text-3xl font-bold text-slate-800 mt-2 mb-3">
               Find the Right Product
             </h2>
-            <p className="text-slate-600 text-sm max-w-xl mx-auto mb-6 leading-relaxed">
+            <p className="text-slate-600 text-base sm:text-[1.05rem] max-w-[460px] mx-auto mb-6 leading-relaxed">
               Search across 240+ construction chemicals, waterproofing solutions, grouts, and partner brands.
             </p>
 
@@ -294,10 +294,10 @@ export default function HomePage() {
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mt-3 mb-6">
                 Practical Solutions for Real Construction Challenges
               </h2>
-              <p className="text-slate-600 leading-relaxed mb-6">
+              <p className="text-slate-600 leading-relaxed mb-6 max-w-[525px]">
                 Swaati Enterprises provides construction chemicals and engineering solutions trusted by contractors, builders and industrial clients. Our products are designed to solve everyday site challenges like water leakage, concrete durability, surface protection and structural repair.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-8">
+              <p className="text-slate-600 leading-relaxed mb-8 max-w-[525px]">
                 With strong industry experience and a reliable supply network, we help projects run smoothly by providing the right materials at the right time. Our team also supports clients with technical guidance so products are used correctly and deliver long-term performance.
               </p>
               <div className="grid grid-cols-2 gap-6 mb-8">
@@ -411,20 +411,20 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-3 sm:gap-6">
               <div className="bg-royal-600 text-white p-4 sm:p-8 rounded-xl">
-                <div className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">6500+</div>
-                <div className="text-royal-200 text-xs sm:text-base">Projects Delivered</div>
+                <div className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">20+</div>
+                <div className="text-royal-200 text-xs sm:text-base">Years Experience</div>
               </div>
               <div className="bg-slate-100 p-4 sm:p-8 rounded-xl">
-                <div className="text-2xl sm:text-4xl font-bold text-royal-600 mb-1 sm:mb-2">240+</div>
-                <div className="text-slate-600 text-xs sm:text-base">Certified Products</div>
+                <div className="text-2xl sm:text-4xl font-bold text-royal-600 mb-1 sm:mb-2">6500+</div>
+                <div className="text-slate-600 text-xs sm:text-base">Satisfied Clients</div>
               </div>
               <div className="bg-slate-100 p-4 sm:p-8 rounded-xl">
-                <div className="text-2xl sm:text-4xl font-bold text-royal-600 mb-1 sm:mb-2">20+</div>
-                <div className="text-slate-600 text-xs sm:text-base">Years Experience</div>
+                <div className="text-2xl sm:text-4xl font-bold text-royal-600 mb-1 sm:mb-2">15+</div>
+                <div className="text-slate-600 text-xs sm:text-base">Renowned Manufacturers</div>
               </div>
               <div className="bg-royal-600 text-white p-4 sm:p-8 rounded-xl">
-                <div className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">5000+</div>
-                <div className="text-royal-200 text-xs sm:text-base">Happy Clients</div>
+                <div className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">50+</div>
+                <div className="text-royal-200 text-xs sm:text-base">Project Completed</div>
               </div>
             </div>
           </div>

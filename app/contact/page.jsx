@@ -178,7 +178,7 @@ export default function ContactPage() {
                   Send Project Requirement
                 </h2>
                 <p className="text-slate-500 text-sm mb-6 leading-relaxed">
-                  Fill in your details below and our technical engineers will contact you with product specifications and price quotations.
+                  Fill in your details below and our team will contact you with product specifications and price quotations.
                 </p>
 
                 <ContactForm />

@@ -110,7 +110,7 @@ export default function AboutPage() {
             <div>
               <img
                 src="/images/swaati_enterprises_founder_shailendra-patil.webp"
-                alt="Founder Shailendra Patil"
+                alt="Founder Mr. Shailendra Patil"
                 className="rounded-2xl shadow-xl w-full"
               />
             </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
             <div>
               <span className="text-royal-600 font-semibold text-sm uppercase">Founder</span>
               <h2 className="text-3xl font-bold text-slate-800 mt-2 mb-6">
-                Shailendra Patil
+                Mr. Shailendra Patil
               </h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 Mr. Shailendra Patil, Founder and CEO of Swaati Enterprises, brings more than three decades of experience in the construction chemicals industry. His career began with STP Ltd where he worked as Area Sales Manager from 1992 to 1998.

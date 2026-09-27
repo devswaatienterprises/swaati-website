@@ -244,8 +244,8 @@
       "id": "ease-grout",
       "slug": "ease-grout",
       "name": "Ease Grout",
-      "company": "Constro-Link Ease Series",
-      "companySlug": "constro-link-ease-series",
+      "company": "Constro-Link",
+      "companySlug": "constro-link",
       "category": "Grouts",
       "categorySlug": "grouts",
       "type": "Polyurethane injection",
@@ -262,8 +262,8 @@
       "id": "ease-koolcoat",
       "slug": "ease-koolcoat",
       "name": "Ease Koolcoat",
-      "company": "Constro-Link Ease Series",
-      "companySlug": "constro-link-ease-series",
+      "company": "Constro-Link",
+      "companySlug": "constro-link",
       "category": "Protective Coatings",
       "categorySlug": "protective-coatings",
       "type": "Protective Coatings",
@@ -280,8 +280,8 @@
       "id": "ease-nano-primer",
       "slug": "ease-nano-primer",
       "name": "Ease Nano Primer",
-      "company": "Constro-Link Ease Series",
-      "companySlug": "constro-link-ease-series",
+      "company": "Constro-Link",
+      "companySlug": "constro-link",
       "category": "Waterproofing",
       "categorySlug": "waterproofing",
       "type": "Primers",
@@ -2814,10 +2814,10 @@
       "productCount": 10
     },
     {
-      "id": "constro-link-ease-series",
-      "name": "Constro-Link Ease Series",
-      "slug": "constro-link-ease-series",
-      "description": "Ease Series multi-use polyurethane grouts, heat reflective coatings and water repellents.",
+      "id": "constro-link",
+      "name": "Constro-Link",
+      "slug": "constro-link",
+      "description": "Multi-use polyurethane grouts, heat reflective coatings and water repellents.",
       "categories": [
         "Grouts",
         "Protective Coatings",
@@ -2939,21 +2939,6 @@
       "productCount": 10
     },
     {
-      "id": "others",
-      "name": "Others",
-      "slug": "others",
-      "description": "Certified chemical anchors, grouting equipment, packers, backing rods and application accessories.",
-      "categories": [
-        "Anchoring & Fixings",
-        "Structural Repair",
-        "Fibers & Reinforcement",
-        "Grouting Equipment & Accessories",
-        "Joint Sealants & Accessories",
-        "Waterproofing"
-      ],
-      "productCount": 31
-    },
-    {
       "id": "penetron",
       "name": "Penetron",
       "slug": "penetron",
@@ -3033,6 +3018,21 @@
         "Waterproofing"
       ],
       "productCount": 4
+    },
+    {
+      "id": "others",
+      "name": "Others",
+      "slug": "others",
+      "description": "Certified chemical anchors, grouting equipment, packers, backing rods and application accessories.",
+      "categories": [
+        "Anchoring & Fixings",
+        "Structural Repair",
+        "Fibers & Reinforcement",
+        "Grouting Equipment & Accessories",
+        "Joint Sealants & Accessories",
+        "Waterproofing"
+      ],
+      "productCount": 31
     }
   ]
 }

@@ -18,7 +18,7 @@ const partnerLogoScale = {
   'apcotex-industries': 'scale-160 group-hover:scale-165',
   'kemper': 'scale-155 group-hover:scale-160',
   'myk-arment': 'scale-160 group-hover:scale-165',
-  'constro-link-ease-series': 'scale-160 group-hover:scale-165',
+  'constro-link': 'scale-160 group-hover:scale-165',
   'non-woven-geotextiles': 'scale-155 group-hover:scale-160',
   'reliance-recron-fiber': 'scale-160 group-hover:scale-165',
   'relience-recron-fiber': 'scale-160 group-hover:scale-165',
