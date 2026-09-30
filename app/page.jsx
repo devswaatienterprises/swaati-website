@@ -1,12 +1,39 @@
 import Link from 'next/link';
 import ProductSearch from '@/components/ProductSearch';
+import { getAllPartners } from '@/lib/productsData';
 
 export const metadata = {
   title: 'Swaati Enterprises - Construction Chemical & Engineering Solutions',
   description: 'Trusted partner for Waterproofing Systems, Concrete Admixtures, Epoxy Flooring, Structural Repair and Industrial Solutions.',
 };
 
+const partnerLogoScaleMap = {
+  'fosroc': 'scale-105',
+  'dr-fixit': 'scale-110',
+  'sika': 'scale-110',
+  'penetron': 'scale-120',
+  'stp-ltd': 'scale-125',
+  'cico': 'scale-125',
+  'mc-bauchemie': 'scale-130',
+  'apcotex-industries': 'scale-145',
+  'kemper': 'scale-130',
+  'myk-arment': 'scale-135',
+  'constro-link': 'scale-135',
+  'non-woven-geotextiles': 'scale-130',
+  'reliance-recron-fiber': 'scale-145',
+  'sunanda': 'scale-130',
+  'kwickfix-industries-pvt-ltd': 'scale-130',
+  'kangaroo-and-maris-polymers': 'scale-130',
+  'alfashield-polymers': 'scale-130',
+  'sp-concare': 'scale-130',
+  'kerapoxy': 'scale-130',
+};
+
 export default function HomePage() {
+  const partnerList = getAllPartners().filter(
+    (p) => p.slug !== 'others' && p.slug !== 'other-variety'
+  );
+
   const solutions = [
     {
       name: 'Waterproofing Systems',
@@ -122,91 +149,145 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-gradient relative overflow-hidden">
-        {/* Background Video Layer */}
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            className="w-full h-full object-cover object-center opacity-25 scale-105"
-          >
-            <source src="/images/swaati_enterprises_video-1.mp4" type="video/mp4" />
-          </video>
+      <section className="relative w-full overflow-hidden bg-slate-950 text-white pb-0">
+        {/* Full-width Hero Background Image Layer */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          <img
+            src="/images/swaati-enterprises-hero-img.webp"
+            alt="Swaati Enterprises Hero"
+            className="w-full h-full object-cover object-[78%_center] sm:object-[82%_center] lg:object-[88%_center]"
+          />
+          {/* Subtle blue gradient overlay on text side for crisp legibility while keeping building bright */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#070d2b]/95 via-[#070d2b]/75 sm:via-[#070d2b]/55 lg:via-[#070d2b]/35 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#070d2b]/90 via-transparent to-[#070d2b]/30 pointer-events-none lg:hidden" />
         </div>
 
-        {/* Matching About Us Royal Blue Gradient Overlay */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-br from-[#0a1142]/85 via-[#1e2a8f]/75 to-[#152070]/85 pointer-events-none"></div>
+        {/* Main Hero Content Area - Exactly ~60px top padding below header */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full relative z-10 pt-[55px] sm:pt-[60px] lg:pt-[60px] pb-6 sm:pb-9 lg:pb-10">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-        {/* Ambient Glow matching About Us Hero */}
-        <div className="absolute inset-0 z-[2] pointer-events-none">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2 opacity-15"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#1e2a8f] rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2 opacity-25"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20 lg:py-28 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="animate-fade-in">
-              <h1 className="text-2xl sm:text-[1.8rem] lg:text-[2.4rem] xl:text-5xl font-bold text-white leading-tight mb-4 sm:mb-6" id="hero-headline">
-                Construction Chemicals &amp; Engineering Solutions You Can Rely On!
-              </h1>
-              <p className="text-[0.8rem] sm:text-base text-royal-200 mb-6 sm:mb-8 leading-relaxed max-w-[440px]" id="hero-subtext">
-                We supply proven solutions for waterproofing, concrete performance, epoxy flooring, structural repair and industrial protection, helping builders and contractors deliver stronger, longer-lasting structures.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Link
-                  href="/products"
-                  className="bg-white text-royal-700 px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold hover:bg-royal-50 transition-all transform hover:scale-105 shadow-lg text-center w-full sm:w-auto"
-                >
-                  Explore Products
-                </Link>
-                <a
-                  href="https://wa.me/919371755337?text=Hello%20Swaati%20Enterprises%2C%20I%20would%20like%20to%20get%20a%20quote."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-royal-600 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold hover:bg-royal-700 transition-all transform hover:scale-105 shadow-lg inline-block text-center w-full sm:w-auto"
-                >
-                  Request Quotation
-                </a>
+            {/* Left-side Hero Content - Refined, airy typography ~15-20% smaller */}
+            <div className="lg:col-span-7 flex flex-col justify-center animate-fade-in text-left">
+              {/* Small Eyebrow */}
+              <div className="mb-2.5 sm:mb-3">
+                <span className="inline-block text-[10px] sm:text-[11px] font-semibold tracking-[0.18em] uppercase text-royal-200">
+                  CONSTRUCTION CHEMICALS &amp; ENGINEERING SOLUTIONS
+                </span>
               </div>
+
+              {/* Main Heading - Reduced font size by 15-20% and font weight to font-bold */}
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-[1.18] tracking-tight mb-3.5 sm:mb-4" id="hero-headline">
+                Trusted brands<br />for stronger builds.
+              </h1>
+
+              {/* Supporting Text - Balanced two-line wrapping */}
+              <p className="text-sm sm:text-base text-royal-100/90 leading-relaxed max-w-md mb-0 font-normal" id="hero-subtext">
+                Swaati Enterprises distributes construction chemical products from leading manufacturers.
+              </p>
             </div>
-            <div className="hidden lg:block animate-fade-in delay-200">
-              <div className="relative">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-white/10 rounded-xl p-6 text-center">
-                      <div className="text-4xl font-bold text-white mb-2">20+</div>
-                      <div className="text-royal-200 text-sm">Years Experience</div>
-                    </div>
-                    <div className="bg-white/10 rounded-xl p-6 text-center">
-                      <div className="text-4xl font-bold text-white mb-2">6500+</div>
-                      <div className="text-royal-200 text-sm">Satisfied Clients</div>
-                    </div>
-                    <div className="bg-white/10 rounded-xl p-6 text-center">
-                      <div className="text-4xl font-bold text-white mb-2">15+</div>
-                      <div className="text-royal-200 text-sm">Renowned Manufacturers</div>
-                    </div>
-                    <div className="bg-white/10 rounded-xl p-6 text-center">
-                      <div className="text-4xl font-bold text-white mb-2">50+</div>
-                      <div className="text-royal-200 text-sm">Project Completed</div>
-                    </div>
+
+            {/* Right-side 2x2 Statistics Grid - Visually balanced with smaller left content */}
+            <div className="lg:col-span-5 animate-fade-in delay-100 w-full mt-4 lg:mt-0">
+              <div className="grid grid-cols-2 gap-3.5 sm:gap-4 lg:gap-5 w-full">
+                {/* Stat Card 1 */}
+                <div className="bg-[#070d2b]/65 hover:bg-[#070d2b]/80 backdrop-blur-md border border-white/15 hover:border-royal-400/40 rounded-2xl p-3.5 sm:p-5 transition-all duration-300 flex flex-col justify-center min-h-[100px] sm:min-h-[118px] group">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-none mb-1.5 sm:mb-2 group-hover:scale-105 transition-transform origin-left">
+                    240+
+                  </div>
+                  <div className="text-xs sm:text-sm text-royal-200 font-medium leading-snug">
+                    Products
                   </div>
                 </div>
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-royal-400/30 rounded-full blur-xl"></div>
+
+                {/* Stat Card 2 */}
+                <div className="bg-[#070d2b]/65 hover:bg-[#070d2b]/80 backdrop-blur-md border border-white/15 hover:border-royal-400/40 rounded-2xl p-3.5 sm:p-5 transition-all duration-300 flex flex-col justify-center min-h-[100px] sm:min-h-[118px] group">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-none mb-1.5 sm:mb-2 group-hover:scale-105 transition-transform origin-left">
+                    6500+
+                  </div>
+                  <div className="text-xs sm:text-sm text-royal-200 font-medium leading-snug">
+                    Satisfied Clients
+                  </div>
+                </div>
+
+                {/* Stat Card 3 */}
+                <div className="bg-[#070d2b]/65 hover:bg-[#070d2b]/80 backdrop-blur-md border border-white/15 hover:border-royal-400/40 rounded-2xl p-3.5 sm:p-5 transition-all duration-300 flex flex-col justify-center min-h-[100px] sm:min-h-[118px] group">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-none mb-1.5 sm:mb-2 group-hover:scale-105 transition-transform origin-left">
+                    20+
+                  </div>
+                  <div className="text-xs sm:text-sm text-royal-200 font-medium leading-snug">
+                    Years Experience
+                  </div>
+                </div>
+
+                {/* Stat Card 4 */}
+                <div className="bg-[#070d2b]/65 hover:bg-[#070d2b]/80 backdrop-blur-md border border-white/15 hover:border-royal-400/40 rounded-2xl p-3.5 sm:p-5 transition-all duration-300 flex flex-col justify-center min-h-[100px] sm:min-h-[118px] group">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-none mb-1.5 sm:mb-2 group-hover:scale-105 transition-transform origin-left">
+                    15+
+                  </div>
+                  <div className="text-xs sm:text-sm text-royal-200 font-medium leading-snug">
+                    Renowned Manufacturers
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
-        {/* Wave Divider */}
-        <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-              fill="white"
-            />
-          </svg>
+      </section>
+
+      {/* Full-Width Light Manufacturer Network Section - Directly Below Hero */}
+      <section className="w-full bg-[#f8fafc] border-y border-slate-200/80 py-7 sm:py-9 overflow-hidden relative">
+        {/* Section Header: Centered title with horizontal divider lines */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-5 sm:mb-6">
+          <div className="flex items-center justify-center gap-4 sm:gap-6">
+            <div className="h-[1px] bg-slate-300/80 flex-1 max-w-[100px] sm:max-w-[220px]" />
+            <span className="text-[11px] sm:text-xs font-bold tracking-widest text-slate-500 uppercase whitespace-nowrap">
+              OUR MANUFACTURER NETWORK
+            </span>
+            <div className="h-[1px] bg-slate-300/80 flex-1 max-w-[100px] sm:max-w-[220px]" />
+          </div>
+        </div>
+
+        {/* Moving Marquee Track Container (Right to Left) */}
+        <div className="relative w-full overflow-hidden flex items-center py-1">
+          {/* Subtle Edge Fades for Smooth Infinite Entrance/Exit */}
+          <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-r from-[#f8fafc] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 bg-gradient-to-l from-[#f8fafc] to-transparent z-10 pointer-events-none" />
+
+          {/* Marquee Track */}
+          <div className="animate-marquee-left flex items-center gap-4 sm:gap-6 lg:gap-7 min-w-full">
+            {/* Sequence Copy 1 */}
+            {partnerList.map((partner, index) => (
+              <Link
+                key={`hero-partner-1-${partner.slug}-${index}`}
+                href={`/partners/${partner.slug}`}
+                className="bg-white hover:bg-slate-50 border border-slate-200/80 hover:border-slate-300 rounded-xl px-4 sm:px-5 py-2.5 flex items-center justify-center shrink-0 h-[52px] sm:h-[62px] lg:h-[70px] w-auto transition-all duration-300 hover:scale-105 shadow-sm hover:shadow"
+                title={partner.name}
+              >
+                <img
+                  src={partner.image}
+                  alt={`${partner.name} logo`}
+                  className={`max-h-[38px] sm:max-h-[48px] lg:max-h-[54px] w-auto max-w-[130px] sm:max-w-[165px] object-contain opacity-100 filter-none transition-transform ${partnerLogoScaleMap[partner.slug] || 'scale-105'}`}
+                />
+              </Link>
+            ))}
+
+            {/* Sequence Copy 2 (for seamless infinite loop) */}
+            {partnerList.map((partner, index) => (
+              <Link
+                key={`hero-partner-2-${partner.slug}-${index}`}
+                href={`/partners/${partner.slug}`}
+                className="bg-white hover:bg-slate-50 border border-slate-200/80 hover:border-slate-300 rounded-xl px-4 sm:px-5 py-2.5 flex items-center justify-center shrink-0 h-[52px] sm:h-[62px] lg:h-[70px] w-auto transition-all duration-300 hover:scale-105 shadow-sm hover:shadow"
+                title={partner.name}
+              >
+                <img
+                  src={partner.image}
+                  alt={`${partner.name} logo`}
+                  className={`max-h-[38px] sm:max-h-[48px] lg:max-h-[54px] w-auto max-w-[130px] sm:max-w-[165px] object-contain opacity-100 filter-none transition-transform ${partnerLogoScaleMap[partner.slug] || 'scale-105'}`}
+                />
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -214,10 +295,7 @@ export default function HomePage() {
       <section className="py-12 bg-white relative z-20">
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 lg:p-10 shadow-sm text-center">
-            <span className="text-royal-600 font-semibold text-xs tracking-wider uppercase">
-              Quick Product Finder
-            </span>
-            <h2 className="text-2xl lg:text-3xl font-bold text-slate-800 mt-2 mb-3">
+            <h2 className="text-2xl lg:text-3xl font-bold text-slate-800 mb-3">
               Find the Right Product
             </h2>
             <p className="text-slate-600 text-base sm:text-[1.05rem] max-w-[460px] mx-auto mb-6 leading-relaxed">
